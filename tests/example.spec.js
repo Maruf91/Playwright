@@ -45,5 +45,7 @@ test.only('Client app login',async({page})=>{
       break;
     }
   } 
+  await page.locator("[routerlink*='cart']").click();
+  await page.locator("h3:has-text('zara coat 3')").isVisible();
   
 });
